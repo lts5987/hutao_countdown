@@ -23,7 +23,9 @@
   <img src="20210301_121715.gif" />
   
   <p id="demo"></p>
-
+  <audio style="display: none">
+    <source src="./357_01_jp.wav" type="audio/wav">
+  </audio>
   <script>
     var countDownDate = new Date('2021-03-02T18:00:00+08:00').getTime();
 
@@ -44,7 +46,7 @@
       if (distance < 0) {
         clearInterval(x);
         document.getElementById("demo").innerHTML = "胡桃开抽啦";
-        var audio = new Audio('./357_01_jp.wav');
+        var audio = document.querySelector('audio');
         audio.play();
       }
     }, 1000);
